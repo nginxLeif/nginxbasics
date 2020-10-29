@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS `wp1`;
+GRANT ALL ON `wp1`.* TO 'wordpress'@'%';
+CREATE DATABASE IF NOT EXISTS `wp2`;
+GRANT ALL ON `wp2`.* TO 'wordpress'@'%';
+CREATE DATABASE IF NOT EXISTS `wp3`;
+GRANT ALL ON `wp3`.* TO 'wordpress'@'%';
+CREATE DATABASE IF NOT EXISTS `wp4`;
+GRANT ALL ON `wp4`.* TO 'wordpress'@'%';
+CREATE DATABASE IF NOT EXISTS `wp5`;
+GRANT ALL ON `wp5`.* TO 'wordpress'@'%';
