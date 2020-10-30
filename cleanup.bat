@@ -1,0 +1,1 @@
+docker image rm nginxbasics_wordpress1 nginxbasics_wordpress2 nginxbasics_wordpress3 nginxbasics_wordpress4 nginxbasics_wordpress5 nginxbasics_nginxplus --force

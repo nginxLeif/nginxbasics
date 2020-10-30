@@ -10,9 +10,9 @@ LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 # ENV PKG_RELEASE   1
 
 # Download certificate and key from the customer portal (https://cs.nginx.com)
-# and copy to the build context
-COPY nginx-repo.crt /etc/apk/cert.pem
-COPY nginx-repo.key /etc/apk/cert.key
+# and copy to the build context in a folder named nginxplus/certs
+COPY certs/nginx-repo.crt /etc/apk/cert.pem
+COPY certs/nginx-repo.key /etc/apk/cert.key
 
 RUN set -x \
 # Create nginx user/group first, to be consistent throughout Docker variants
@@ -76,7 +76,7 @@ RUN set -x \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
-EXPOSE 80
+EXPOSE 80 443 8000
 
 STOPSIGNAL SIGTERM
 

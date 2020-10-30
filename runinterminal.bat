@@ -27,11 +27,7 @@ docker exec nginxbasics_db_1 mysql -uroot -psomewordpresspassword -D wp4 -e "UPD
 docker exec nginxbasics_db_1 mysql -uroot -psomewordpresspassword -D wp5 -e "UPDATE wp_options SET option_value='http://wp.nginx.local' WHERE option_name='siteurl';"
 docker exec nginxbasics_db_1 mysql -uroot -psomewordpresspassword -D wp5 -e "UPDATE wp_options SET option_value='http://wp.nginx.local' WHERE option_name='home';"
 
-grep -qF -- "throw new Exception(\"Without failure how would we recognize success?\");" wp2/themes/twentyseventeen/index.php || sed -i '1 a throw new Exception("Without failure how would we recognize success?");' wp2/themes/twentyseventeen/index.php
+grep -qF -- "throw new Exception(\"Without failure how would we recognize success?\");" wp3/themes/twentyseventeen/index.php || sed -i '1 a throw new Exception("Without failure how would we recognize success?");' wp3/themes/twentyseventeen/index.php
 grep -qF -- "sleep(5);" wp4/themes/twentyseventeen/index.php || sed -i '1 a sleep(5);' wp4/themes/twentyseventeen/index.php
 
-docker inspect nginxbasics_wordpress1_1 | grep "\"IPAddress\":"
-docker inspect nginxbasics_wordpress2_1 | grep "\"IPAddress\":"
-docker inspect nginxbasics_wordpress3_1 | grep "\"IPAddress\":"
-docker inspect nginxbasics_wordpress4_1 | grep "\"IPAddress\":"
-docker inspect nginxbasics_wordpress5_1 | grep "\"IPAddress\":"
+

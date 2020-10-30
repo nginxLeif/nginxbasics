@@ -1,0 +1,1 @@
+docker exec nginxbasics_nginxplus_1 nginx -s reload
